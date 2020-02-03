@@ -1,0 +1,16 @@
+
+[submodule "deps/wish-rpc-c99"]
+	path = deps/wish-rpc-c99
+	url = https://github.com/ControlThings/wish-rpc-c99.git
+[submodule "deps/uthash"]
+	path = deps/uthash
+	url = https://github.com/troydhanson/uthash.git
+[submodule "deps/ed25519"]
+	path = deps/ed25519
+	url = https://github.com/ControlThings/ed25519.git
+[submodule "deps/mbedtls"]
+	path = deps/mbedtls
+	url = https://github.com/ARMmbed/mbedtls.git
+[submodule "deps/libuv"]
+	path = deps/libuv
+	url = https://github.com/libuv/libuv.git
