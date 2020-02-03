@@ -26,11 +26,11 @@ BUILD_BASE	= build
 TARGET	= libmist.a
 
 # which modules (subdirectories) of the project to include in compiling
-MODULES		= src wish wish_app_deps wish_app_port_deps/unix wish_app deps/wish-rpc-c99/src apps/mist-standalone deps/mbedtls-2.1.2/library deps/ed25519/src ed25519/src deps/bson 
-EXTRA_INCDIR    = wish wish_app_deps deps/libuv/include deps/mbedtls-2.1.2/include deps/wish-rpc-c99/src deps/bson deps/ed25519/src deps/uthash/include
+MODULES		= src wish wish_app_deps wish_app_port_deps/unix wish_app deps/wish-rpc-c99/src apps/mist-standalone deps/mbedtls/library deps/ed25519/src ed25519/src deps/bson 
+EXTRA_INCDIR    = wish wish_app_deps deps/libuv/include deps/mbedtls/include deps/wish-rpc-c99/src deps/bson deps/ed25519/src deps/uthash/include
 
 # General CFLAGS, common to all builds
-CFLAGS		= -Wall -ffunction-sections -fdata-sections -Wno-pointer-sign -Werror -Wno-unused-function -Wno-unused-variable 
+CFLAGS		= -Wall -ffunction-sections -fdata-sections -Wno-pointer-sign -Werror -Wno-unused-function -Wno-unused-variable -Wno-unused-result
 CFLAGS         += -DMIST_API_VERSION_STRING=\"$(shell git describe --abbrev=4 --dirty --always --tags)\"
 
 ifeq ($(BUILD_TYPE), nodejs_plugin)
