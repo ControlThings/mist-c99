@@ -302,7 +302,7 @@ void echo_read(uv_stream_t *stream, ssize_t nread, const uv_buf_t *buf) {
         wrote += current_wr;
         parse(client);
         to_be_written = nread - wrote;
-        assert(to_be_written => 0);
+        assert(to_be_written >= 0);
     } while (to_be_written > 0);
 
     uv_read_start(stream, alloc_buffer, echo_read);
