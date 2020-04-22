@@ -37,7 +37,7 @@ ifeq ($(BUILD_TYPE), nodejs_plugin)
 # ...then CFLAGS related to node.js plugin build..."
 CFLAGS += -fvisibility=hidden -fPIC -pthread -MD -DSTDC_HEADERS -DHAVE_STDLIB_H -DENABLE_PTHREAD 
 CFLAGS += -DMIST_API_COMMISSION_TIME_SCALE=50
-CFLAGS += -DMIST_API_MAX_UIDS=512
+CFLAGS += -DMIST_API_MAX_UIDS=2048
 CFLAGS += -DNUM_WISH_APPS=100
 CFLAGS += -DNUM_MIST_APPS=100
 endif
